@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>💌 Aish's Date Proposal</title>
+<title>💌 A message from Aish</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -17,7 +17,6 @@
     --pink-btn:  #f06292;
     --purple:    #b47fcb;
     --purple-dark: #9c5ab8;
-    --cream:     #fff5f7;
     --text-dark: #5c3148;
     --text-mid:  #8b5a72;
     --glass-bg:  rgba(255,255,255,0.55);
@@ -66,24 +65,44 @@
 
   @keyframes cardIn {
     from { opacity: 0; transform: translateY(24px) scale(.97); }
-    to   { opacity: 1; transform: translateY(0)   scale(1);   }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
   }
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.45rem, 5vw, 1.9rem);
+    font-size: clamp(1.4rem, 5vw, 1.85rem);
     font-weight: 700;
     color: var(--text-dark);
-    line-height: 1.25;
+    line-height: 1.28;
     margin-bottom: 6px;
   }
-  h1.big { font-size: clamp(1.2rem, 4.5vw, 1.55rem); }
+  h1.big { font-size: clamp(1.15rem, 4.5vw, 1.5rem); }
 
   .sub {
     font-size: .95rem;
     color: var(--text-mid);
     margin-bottom: 24px;
     font-weight: 400;
+  }
+
+  /* gradient name highlights */
+  .n-girl {
+    display: inline;
+    background: linear-gradient(135deg, #f06292, #b47fcb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-style: italic;
+  }
+  .n-aish {
+    display: inline;
+    background: linear-gradient(135deg, #b47fcb, #7986cb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-style: italic;
   }
 
   /* ── GORILLA ── */
@@ -107,7 +126,7 @@
   }
 
   .mascot {
-    font-size: 5rem;
+    font-size: 4.8rem;
     margin: 8px auto 20px;
     display: block;
     animation: bounce 2.4s ease-in-out infinite;
@@ -118,16 +137,26 @@
     50%      { transform: translateY(-10px); }
   }
 
-  /* ── NAME TAG ── */
-  .name-tag {
+  /* ── SENDER TAG ── */
+  .sender-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,.65);
+    border: 1.5px solid rgba(240,98,146,.25);
+    border-radius: 50px;
+    padding: 5px 14px 5px 10px;
+    font-size: .82rem;
+    font-weight: 600;
+    color: var(--text-mid);
+    margin-bottom: 18px;
+    letter-spacing: .02em;
+  }
+  .sender-chip .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#f06292,#b47fcb);
     display: inline-block;
-    background: linear-gradient(135deg, #f06292, #b47fcb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
   }
 
   /* ── BUTTONS ── */
@@ -261,7 +290,7 @@
     border: 1.5px solid rgba(240,98,146,.25);
     border-radius: 20px;
     padding: 20px 22px;
-    margin: 22px 0 28px;
+    margin: 22px 0 20px;
     text-align: left;
   }
   .summary-row {
@@ -273,7 +302,7 @@
   }
   .summary-row:last-child { border-bottom: none; }
   .summary-icon { font-size: 1.3rem; }
-  .summary-key { font-size: .8rem; color: var(--text-mid); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+  .summary-key { font-size: .78rem; color: var(--text-mid); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
   .summary-val { font-size: 1rem; font-weight: 600; color: var(--text-dark); }
 
   #step5 .big-heart {
@@ -288,6 +317,13 @@
     28%      { transform: scale(1); }
     42%      { transform: scale(1.14); }
     70%      { transform: scale(1); }
+  }
+
+  .footer-note {
+    font-size: .84rem;
+    color: var(--text-mid);
+    margin-top: 14px;
+    line-height: 1.5;
   }
 
   /* ── UTIL ── */
@@ -312,11 +348,12 @@
 
   <!-- ═══ STEP 1 ═══ -->
   <div id="step1" class="card">
+    <div class="sender-chip"><span class="dot"></span> a message from <span class="n-aish">Aish</span> 💌</div>
     <div class="gorilla-wrap">
       <span class="gorilla">🦍</span>
     </div>
-    <h1>🌸 Hey <span class="name-tag">Aish</span>, will you go on a date with me? 🌸</h1>
-    <p class="sub mt-2">Please say yes. I beg. 🥺</p>
+    <h1>🌸 Hey <span class="n-girl">Girl</span>, will you go on a date with me? 🌸</h1>
+    <p class="sub mt-2">please say yes, i'm begging 🥺</p>
     <div class="btn-row">
       <button class="btn btn-pink" id="yes-btn">YES ♥</button>
       <button class="btn btn-purple" id="no-btn">no 🐾</button>
@@ -326,8 +363,8 @@
   <!-- ═══ STEP 2 ═══ -->
   <div id="step2" class="card hidden">
     <span class="mascot" style="font-size:4.2rem; animation-duration:1.6s;">🧽</span>
-    <h1 class="big">WAIT <span class="name-tag">Aish</span> YOU ACTUALLY SAID YES?? 😭</h1>
-    <p class="sub mt-2">I was so ready for you to say no 😅</p>
+    <h1 class="big">WAIT <span class="n-girl">Girl</span> YOU ACTUALLY SAID YES?? 😭</h1>
+    <p class="sub mt-2"><span class="n-aish">Aish</span> was so ready for you to say no 😅</p>
     <div class="divider"></div>
     <button class="btn btn-pink btn-wide" id="okay-btn">okay okay! →</button>
   </div>
@@ -335,8 +372,8 @@
   <!-- ═══ STEP 3 ═══ -->
   <div id="step3" class="card hidden">
     <span class="mascot" style="font-size:3.8rem;">📅</span>
-    <h1 class="big">So <span class="name-tag">Aish</span>... when are you free?</h1>
-    <p class="sub mt-2">pick a moment — I'll clear my whole schedule 🥹</p>
+    <h1 class="big">So <span class="n-girl">Girl</span>... when are you free?</h1>
+    <p class="sub mt-2"><span class="n-aish">Aish</span> will clear the whole schedule 🥹</p>
     <div class="divider"></div>
     <div class="form-group">
       <label>Pick a Day 📅</label>
@@ -361,8 +398,8 @@
   <!-- ═══ STEP 4 ═══ -->
   <div id="step4" class="card hidden">
     <span class="mascot" style="font-size:3.4rem;">🍽️</span>
-    <h1 class="big">What are we feeling, <span class="name-tag">Aish</span>? 🍽️✨</h1>
-    <p class="sub mt-2">pick your vibe</p>
+    <h1 class="big">What are we feeling? 🍽️✨</h1>
+    <p class="sub mt-2">pick your vibe, <span class="n-girl">Girl</span></p>
     <div class="food-grid" id="food-grid">
       <div class="food-card" data-food="Pizza 🍕"><span class="food-emoji">🍕</span><span class="food-label">Pizza</span></div>
       <div class="food-card" data-food="Sushi 🍣"><span class="food-emoji">🍣</span><span class="food-label">Sushi</span></div>
@@ -376,8 +413,9 @@
   <!-- ═══ STEP 5 ═══ -->
   <div id="step5" class="card hidden">
     <span class="big-heart">💖</span>
-    <h1 style="font-size:clamp(1.3rem,5vw,1.7rem);">Yay <span class="name-tag">Aish</span>! You made the right choice!</h1>
-    <p class="sub mt-2">We are officially going on a date! I'll see you then! 🌸</p>
+    <h1 style="font-size:clamp(1.3rem,5vw,1.7rem);">Yay <span class="n-girl">Girl</span>! You made the right choice!</h1>
+    <p class="sub mt-2"><span class="n-aish">Aish</span> &amp; <span class="n-girl">Girl</span> are officially going on a date! 🌸</p>
+
     <div class="summary">
       <div class="summary-row">
         <span class="summary-icon">📅</span>
@@ -401,7 +439,10 @@
         </div>
       </div>
     </div>
-    <p style="font-size:.88rem; color:var(--text-mid);">Get ready for the best date ever, <strong>Aish</strong>! 🎉💌</p>
+
+    <p class="footer-note">
+      <span class="n-aish">Aish</span> will see you then! Get ready for the best date ever 🎉💌
+    </p>
   </div>
 
 </div>
@@ -413,19 +454,19 @@ function showStep(n) {
   document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
   const el = document.getElementById('step'+n);
   el.classList.remove('hidden');
-  el.style.animation='none';
-  requestAnimationFrame(()=>{ el.style.animation=''; });
-  state.step=n;
+  el.style.animation = 'none';
+  requestAnimationFrame(() => { el.style.animation = ''; });
+  state.step = n;
 }
 
 function formatDate(val) {
   if (!val) return '—';
   const [y,m,d] = val.split('-');
-  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   return `${d} ${months[+m-1]} ${y}`;
 }
 
-/* ── NO BUTTON ── */
+/* ── NO BUTTON TELEPORT ── */
 const noBtn = document.getElementById('no-btn');
 const PAD = 20;
 
@@ -434,107 +475,111 @@ function teleportNo() {
   if (state.noGone) return;
   if (state.noAttempts >= 7) {
     noBtn.classList.add('fading');
-    setTimeout(()=>noBtn.remove(), 400);
-    state.noGone=true;
+    setTimeout(() => noBtn.remove(), 400);
+    state.noGone = true;
     return;
   }
-  const btnW = noBtn.offsetWidth||120;
-  const btnH = noBtn.offsetHeight||48;
+  const btnW = noBtn.offsetWidth  || 120;
+  const btnH = noBtn.offsetHeight || 48;
   const maxX = window.innerWidth  - btnW - PAD;
   const maxY = window.innerHeight - btnH - PAD;
-  const x = Math.floor(Math.random()*(maxX-PAD))+PAD;
-  const y = Math.floor(Math.random()*(maxY-PAD))+PAD;
+  const x = Math.floor(Math.random() * (maxX - PAD)) + PAD;
+  const y = Math.floor(Math.random() * (maxY - PAD)) + PAD;
   noBtn.classList.add('teleporting');
-  noBtn.style.left=x+'px';
-  noBtn.style.top=y+'px';
+  noBtn.style.left = x + 'px';
+  noBtn.style.top  = y + 'px';
 }
 
-const PROXIMITY = 80;
 document.addEventListener('mousemove', e => {
-  if (state.step!==1||state.noGone) return;
+  if (state.step !== 1 || state.noGone) return;
   const r = noBtn.getBoundingClientRect();
-  const dist = Math.hypot(e.clientX-(r.left+r.width/2), e.clientY-(r.top+r.height/2));
-  if (dist<PROXIMITY) teleportNo();
+  const dist = Math.hypot(e.clientX - (r.left + r.width/2), e.clientY - (r.top + r.height/2));
+  if (dist < 80) teleportNo();
 });
 
-noBtn.addEventListener('touchstart', e=>{ e.preventDefault(); teleportNo(); }, {passive:false});
-noBtn.addEventListener('click', e=>{ e.preventDefault(); teleportNo(); });
+noBtn.addEventListener('touchstart', e => { e.preventDefault(); teleportNo(); }, { passive: false });
+noBtn.addEventListener('click', e => { e.preventDefault(); teleportNo(); });
 
 /* ── FLOW ── */
-document.getElementById('yes-btn').addEventListener('click',()=>showStep(2));
-document.getElementById('okay-btn').addEventListener('click',()=>{
-  document.getElementById('date-input').min=new Date().toISOString().split('T')[0];
+document.getElementById('yes-btn').addEventListener('click', () => showStep(2));
+
+document.getElementById('okay-btn').addEventListener('click', () => {
+  document.getElementById('date-input').min = new Date().toISOString().split('T')[0];
   showStep(3);
 });
 
-document.getElementById('setdate-btn').addEventListener('click',()=>{
-  const d=document.getElementById('date-input').value;
-  const t=document.getElementById('time-select').value;
-  if(!d){shakePulse(document.getElementById('date-input'));return;}
-  if(!t){shakePulse(document.getElementById('time-select'));return;}
-  state.date=d; state.time=t; showStep(4);
+document.getElementById('setdate-btn').addEventListener('click', () => {
+  const d = document.getElementById('date-input').value;
+  const t = document.getElementById('time-select').value;
+  if (!d) { shakePulse(document.getElementById('date-input')); return; }
+  if (!t) { shakePulse(document.getElementById('time-select')); return; }
+  state.date = d; state.time = t;
+  showStep(4);
 });
 
-function shakePulse(el){
-  el.style.borderColor='#e87c9a';
-  el.style.boxShadow='0 0 0 3px rgba(232,124,154,.3)';
-  setTimeout(()=>{el.style.borderColor='';el.style.boxShadow='';},800);
+function shakePulse(el) {
+  el.style.borderColor = '#e87c9a';
+  el.style.boxShadow = '0 0 0 3px rgba(232,124,154,.3)';
+  setTimeout(() => { el.style.borderColor = ''; el.style.boxShadow = ''; }, 800);
 }
 
-document.querySelectorAll('.food-card').forEach(card=>{
-  card.addEventListener('click',()=>{
-    document.querySelectorAll('.food-card').forEach(c=>c.classList.remove('selected'));
+document.querySelectorAll('.food-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.food-card').forEach(c => c.classList.remove('selected'));
     card.classList.add('selected');
-    state.food=card.dataset.food;
-    setTimeout(()=>{
-      document.getElementById('summary-date').textContent=formatDate(state.date);
-      document.getElementById('summary-time').textContent=state.time;
-      document.getElementById('summary-food').textContent=state.food;
+    state.food = card.dataset.food;
+    setTimeout(() => {
+      document.getElementById('summary-date').textContent = formatDate(state.date);
+      document.getElementById('summary-time').textContent = state.time;
+      document.getElementById('summary-food').textContent = state.food;
       showStep(5);
       launchParticles();
-    },350);
+    }, 350);
   });
 });
 
 /* ── PARTICLES ── */
-function launchParticles(){
-  const canvas=document.getElementById('particle-canvas');
-  canvas.style.display='block';
-  canvas.width=window.innerWidth; canvas.height=window.innerHeight;
-  const ctx=canvas.getContext('2d');
-  const EMOJIS=['🌸','💖','✨','🎀','💕','🌷','💗','🦍'];
-  const particles=[];
-  for(let i=0;i<60;i++){
+function launchParticles() {
+  const canvas = document.getElementById('particle-canvas');
+  canvas.style.display = 'block';
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  const ctx = canvas.getContext('2d');
+  const EMOJIS = ['🌸','💖','✨','🎀','💕','🌷','💗','🦍'];
+  const particles = [];
+  for (let i = 0; i < 60; i++) {
     particles.push({
-      x:Math.random()*canvas.width, y:-20-Math.random()*canvas.height,
-      size:13+Math.random()*18, speed:1.2+Math.random()*2.2,
-      drift:(Math.random()-.5)*1.4, rot:Math.random()*Math.PI*2,
-      rotSpeed:(Math.random()-.5)*.06,
-      emoji:EMOJIS[Math.floor(Math.random()*EMOJIS.length)],
-      alpha:.7+Math.random()*.3
+      x: Math.random() * canvas.width,
+      y: -20 - Math.random() * canvas.height,
+      size: 13 + Math.random() * 18,
+      speed: 1.2 + Math.random() * 2.2,
+      drift: (Math.random() - .5) * 1.4,
+      rot: Math.random() * Math.PI * 2,
+      rotSpeed: (Math.random() - .5) * .06,
+      emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
+      alpha: .7 + Math.random() * .3
     });
   }
   let frame;
-  function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    let alive=false;
-    for(const p of particles){
-      p.y+=p.speed; p.x+=p.drift; p.rot+=p.rotSpeed;
-      if(p.y<canvas.height+30) alive=true;
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    for (const p of particles) {
+      p.y += p.speed; p.x += p.drift; p.rot += p.rotSpeed;
+      if (p.y < canvas.height + 30) alive = true;
       ctx.save();
-      ctx.globalAlpha=p.alpha;
-      ctx.translate(p.x,p.y); ctx.rotate(p.rot);
-      ctx.font=p.size+'px serif';
-      ctx.textAlign='center'; ctx.textBaseline='middle';
-      ctx.fillText(p.emoji,0,0);
+      ctx.globalAlpha = p.alpha;
+      ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+      ctx.font = p.size + 'px serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(p.emoji, 0, 0);
       ctx.restore();
     }
-    if(alive){frame=requestAnimationFrame(draw);}
-    else{canvas.style.display='none';}
+    if (alive) { frame = requestAnimationFrame(draw); }
+    else { canvas.style.display = 'none'; }
   }
-  if(frame) cancelAnimationFrame(frame);
+  if (frame) cancelAnimationFrame(frame);
   draw();
 }
 </script>
 </body>
-      </html>
+</html>
